@@ -1,0 +1,110 @@
+{
+  "app": {
+    "signingConfigs": [],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "targetSdkVersion": "6.0.1(21)",
+        "compatibleSdkVersion": "6.0.1(21)",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true
+          }
+        }
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug",
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "base",
+      "srcPath": "./core/base",
+    },
+    {
+      "name": "data",
+      "srcPath": "./core/data",
+    },
+    {
+      "name": "database",
+      "srcPath": "./core/database",
+    },
+    {
+      "name": "datastore",
+      "srcPath": "./core/datastore",
+    },
+    {
+      "name": "designsystem",
+      "srcPath": "./core/designsystem",
+    },
+    {
+      "name": "ibestui",
+      "srcPath": "./core/ibestui",
+    },
+    {
+      "name": "model",
+      "srcPath": "./core/model",
+    },
+    {
+      "name": "navigation",
+      "srcPath": "./core/navigation",
+    },
+    {
+      "name": "network",
+      "srcPath": "./core/network",
+    },
+    {
+      "name": "result",
+      "srcPath": "./core/result",
+    },
+    {
+      "name": "state",
+      "srcPath": "./core/state",
+    },
+    {
+      "name": "ui",
+      "srcPath": "./core/ui",
+    },
+    {
+      "name": "util",
+      "srcPath": "./core/util",
+    },
+    {
+      "name": "auth",
+      "srcPath": "./feature/auth",
+    },
+    {
+      "name": "demo",
+      "srcPath": "./feature/demo",
+    },
+    {
+      "name": "main",
+      "srcPath": "./feature/main",
+    },
+    {
+      "name": "user",
+      "srcPath": "./feature/user",
+    }
+  ]
+}
