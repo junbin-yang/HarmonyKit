@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "core",
+      "value": "核心"
+    },
+    {
+      "name": "navigation",
+      "value": "导航"
+    },
+    {
+      "name": "about",
+      "value": "关于"
+    }
+  ]
+}

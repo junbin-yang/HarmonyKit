@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "core",
+      "value": "Core"
+    },
+    {
+      "name": "navigation",
+      "value": "Navigation"
+    },
+    {
+      "name": "about",
+      "value": "About"
+    }
+  ]
+}

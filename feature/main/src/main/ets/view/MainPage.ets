@@ -1,5 +1,12 @@
 import { AppNavDestination } from "ui";
+import { ColumnCenter, P100, size, SpaceVerticalXSmall } from "designsystem";
+import {
+  bp, BreakpointState, getBreakpointState, getWindowSafeAreaState, WindowSafeAreaState
+} from "state";
 import MainViewModel from "../viewmodel/MainViewModel";
+import { CorePage } from "./CorePage";
+import { NavigationPage } from "./NavigationPage";
+import { AboutPage } from "./AboutPage";
 
 /**
  * @file 主页面视图
@@ -12,6 +19,16 @@ export struct MainPage {
    */
   @Local
   private vm: MainViewModel = new MainViewModel();
+  /**
+   * 窗口安全区状态
+   */
+  @Local
+  private windowSafeAreaState: WindowSafeAreaState = getWindowSafeAreaState();
+  /**
+   * 屏幕断点状态
+   */
+  @Local
+  private breakpointState: BreakpointState = getBreakpointState();
 
   /**
    * 构建主页面
@@ -19,8 +36,9 @@ export struct MainPage {
    */
   build() {
     AppNavDestination({
-      title: "主页面",
-      viewModel: this.vm
+      hideTitleBar: true,
+      viewModel: this.vm,
+      safeAreaEnabled: false
     }) {
       this.MainContent();
     }
@@ -32,6 +50,66 @@ export struct MainPage {
    */
   @Builder
   private MainContent() {
-    Text("主页面内容视图")
+    Tabs({
+      index: this.vm.currentPageIndex,
+      barPosition: this.breakpointState.isLG() ? BarPosition.Start : BarPosition.End,
+    }) {
+      TabContent() {
+        CorePage();
+      }.tabBar(this.tabBarItem(0));
+
+      TabContent() {
+        NavigationPage();
+      }.tabBar(this.tabBarItem(1));
+
+      TabContent() {
+        AboutPage();
+      }.tabBar(this.tabBarItem(2));
+    }
+    .width(P100)
+    .height(P100)
+    .barWidth(this.breakpointState.isLG() ? 96 : P100)
+    .divider({ strokeWidth: 0 })
+    .backgroundColor($r("app.color.bg_white"))
+    .barBackgroundBlurStyle(BlurStyle.Thin)
+    .cachedMaxCount(this.vm.tabItems.length, TabsCacheMode.CACHE_BOTH_SIDE)
+    .barMode(BarMode.Fixed)
+    .scrollable(true)
+    .vertical(this.breakpointState.isLG())
+    .onChange((index: number) => this.vm.handleTabChanged(index))
+    .padding({ bottom: this.windowSafeAreaState.bottomInset });
+  }
+
+  /**
+   * Tabs 的底部导航项
+   * @param {number} index - 索引
+   * @returns {void} 无返回值
+   */
+  @Builder
+  private tabBarItem(index: number) {
+    ColumnCenter() {
+      Image(this.vm.tabItems[index].icon)
+        .attributeModifier(size(bp({
+          sm: 20,
+          md: 22,
+          lg: 24,
+        })))
+        .fillColor(this.vm.currentPageIndex === index ?
+          $r("app.color.primary") :
+          $r("app.color.text_subtitle"));
+
+      SpaceVerticalXSmall();
+
+      Text(this.vm.tabItems[index].title)
+        .fontSize(bp({
+          sm: $r("app.float.body_medium"),
+          md: $r("app.float.body_large"),
+          lg: $r("app.float.headline_large")
+        }))
+        .fontColor(this.vm.currentPageIndex === index ?
+          $r("app.color.primary") :
+          $r("app.color.text_subtitle"))
+        .textAlign(TextAlign.Center);
+    };
   }
 }
