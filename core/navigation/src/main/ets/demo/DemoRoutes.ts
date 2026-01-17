@@ -34,5 +34,13 @@ export const DemoRoutes = {
   /**
    * 结果回传示例页路由
    */
-  NavigationResult: "demo/navigation-result"
+  NavigationResult: "demo/navigation-result",
+  /**
+   * 安全区示例页路由
+   */
+  SafeAreaDemo: "demo/safe-area-demo",
+  /**
+   * 屏幕适配示例页路由
+   */
+  ScreenAdaptDemo: "demo/screen-adapt-demo"
 };

@@ -22,7 +22,7 @@
     },
     {
       "name": "main_core_network_demo_desc",
-      "value": "Network state switching with loading, error, and retry flow."
+      "value": "Basic network request (Base Network) demo."
     },
     {
       "name": "main_core_network_list_demo_title",
@@ -30,7 +30,7 @@
     },
     {
       "name": "main_core_network_list_demo_desc",
-      "value": "Unified list with pull-to-refresh and paging, built-in empty state and retry."
+      "value": "Basic list request (Base List) demo."
     },
     {
       "name": "main_core_database_title",
@@ -38,7 +38,7 @@
     },
     {
       "name": "main_core_database_desc",
-      "value": "Basic CRUD demo with simple data read and write."
+      "value": "Basic CRUD demo on a table."
     },
     {
       "name": "main_core_local_storage_title",
@@ -62,7 +62,7 @@
     },
     {
       "name": "main_core_network_request_desc",
-      "value": "Common request flow with loading and error handling."
+      "value": "Simple network request demo."
     },
     {
       "name": "main_navigation_with_args_title",
@@ -70,7 +70,11 @@
     },
     {
       "name": "main_navigation_with_args_desc",
-      "value": "Type-safe route params with goods ID."
+      "value": "Type-safe params with goods ID and name."
+    },
+    {
+      "name": "main_navigation_goods_name",
+      "value": "Sample Goods"
     },
     {
       "name": "main_navigation_result_title",
@@ -78,7 +82,31 @@
     },
     {
       "name": "main_navigation_result_desc",
-      "value": "Result return demo with refresh flag and data."
+      "value": "Type-safe result using DemoResult."
+    },
+    {
+      "name": "main_navigation_intercept_title",
+      "value": "Navigation Intercept"
+    },
+    {
+      "name": "main_navigation_intercept_desc",
+      "value": "If not logged in, go to Login; after login, open Profile."
+    },
+    {
+      "name": "main_expand_safe_area_title",
+      "value": "Safe Area"
+    },
+    {
+      "name": "main_expand_safe_area_desc",
+      "value": "Shows safe area insets for notch and gesture area adaptation."
+    },
+    {
+      "name": "main_expand_screen_adapt_title",
+      "value": "Screen Adapt"
+    },
+    {
+      "name": "main_expand_screen_adapt_desc",
+      "value": "Shows breakpoint and window width for responsive layouts."
     }
   ]
 }

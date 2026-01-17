@@ -8,6 +8,8 @@ import { StateManagementNav } from "./StateManagementNav";
 import { NetworkRequestNav } from "./NetworkRequestNav";
 import { NavigationWithArgsNav } from "./NavigationWithArgsNav";
 import { NavigationResultNav } from "./NavigationResultNav";
+import { SafeAreaDemoNav } from "./SafeAreaDemoNav";
+import { ScreenAdaptDemoNav } from "./ScreenAdaptDemoNav";
 
 /**
  * @file Demo 模块导航图
@@ -27,5 +29,7 @@ export class DemoGraph implements RouteGraph {
     RouteBuild.register(DemoRoutes.NetworkRequest, wrapBuilder(NetworkRequestNav));
     RouteBuild.register(DemoRoutes.NavigationWithArgs, wrapBuilder(NavigationWithArgsNav));
     RouteBuild.register(DemoRoutes.NavigationResult, wrapBuilder(NavigationResultNav));
+    RouteBuild.register(DemoRoutes.SafeAreaDemo, wrapBuilder(SafeAreaDemoNav));
+    RouteBuild.register(DemoRoutes.ScreenAdaptDemo, wrapBuilder(ScreenAdaptDemoNav));
   }
 }

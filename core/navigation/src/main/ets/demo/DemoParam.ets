@@ -6,9 +6,13 @@
 /**
  * 商品 ID 参数
  */
-export interface DemoGoodsIdParam {
+export interface DemoGoodsParam {
   /**
    * 商品 ID
    */
   goodsId: number;
+  /**
+   * 商品名称
+   */
+  goodsName: Resource;
 }

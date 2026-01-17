@@ -1,5 +1,5 @@
 import { BaseViewModel } from "base";
-import { DemoNavigator } from "navigation";
+import { DemoNavigator, UserNavigator } from "navigation";
 import { NavigationCardItem } from "../model/NavigationCardItem";
 
 /**
@@ -16,7 +16,7 @@ export default class NavigationViewModel extends BaseViewModel {
     {
       title: $r("app.string.main_navigation_with_args_title"),
       description: $r("app.string.main_navigation_with_args_desc"),
-      onClick: () => DemoNavigator.toNavigationWithArgs(10001)
+      onClick: () => DemoNavigator.toNavigationWithArgs(10001, $r("app.string.main_navigation_goods_name"))
     },
     {
       title: $r("app.string.main_navigation_result_title"),
@@ -24,6 +24,11 @@ export default class NavigationViewModel extends BaseViewModel {
       onClick: () => {
         DemoNavigator.toNavigationResult();
       }
+    },
+    {
+      title: $r("app.string.main_navigation_intercept_title"),
+      description: $r("app.string.main_navigation_intercept_desc"),
+      onClick: () => UserNavigator.toProfile()
     }
   ];
 }

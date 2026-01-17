@@ -22,7 +22,7 @@
     },
     {
       "name": "main_core_network_demo_desc",
-      "value": "网络状态切换，包含加载、错误、重试等流程。"
+      "value": "基础网络请求（Base Network）示例。"
     },
     {
       "name": "main_core_network_list_demo_title",
@@ -30,7 +30,7 @@
     },
     {
       "name": "main_core_network_list_demo_desc",
-      "value": "下拉刷新与分页加载的统一列表模板，内置空状态与重试。"
+      "value": "基础列表请求（Base List）示例。"
     },
     {
       "name": "main_core_database_title",
@@ -38,7 +38,7 @@
     },
     {
       "name": "main_core_database_desc",
-      "value": "数据库增删改查示例，展示基础数据读写。"
+      "value": "对表进行增删改查的基础示例。"
     },
     {
       "name": "main_core_local_storage_title",
@@ -62,7 +62,7 @@
     },
     {
       "name": "main_core_network_request_desc",
-      "value": "通用请求流程示例，包含加载与错误处理。"
+      "value": "简单的网络请求示例，仅发起请求。"
     },
     {
       "name": "main_navigation_with_args_title",
@@ -70,7 +70,11 @@
     },
     {
       "name": "main_navigation_with_args_desc",
-      "value": "类型安全路由参数，包含商品 ID 传参。"
+      "value": "类型安全路由参数，包含商品 ID 与商品名称。"
+    },
+    {
+      "name": "main_navigation_goods_name",
+      "value": "示例商品"
     },
     {
       "name": "main_navigation_result_title",
@@ -78,7 +82,31 @@
     },
     {
       "name": "main_navigation_result_desc",
-      "value": "页面结果回传示例，返回刷新标记等数据。"
+      "value": "类型安全返回结果，数据结构为 DemoResult。"
+    },
+    {
+      "name": "main_navigation_intercept_title",
+      "value": "导航拦截"
+    },
+    {
+      "name": "main_navigation_intercept_desc",
+      "value": "未登录跳转登录页，登录后进入用户资料页。"
+    },
+    {
+      "name": "main_expand_safe_area_title",
+      "value": "安全区"
+    },
+    {
+      "name": "main_expand_safe_area_desc",
+      "value": "展示安全区 inset 数据，便于适配刘海与手势区域。"
+    },
+    {
+      "name": "main_expand_screen_adapt_title",
+      "value": "屏幕适配"
+    },
+    {
+      "name": "main_expand_screen_adapt_desc",
+      "value": "展示断点与窗口宽度，便于响应式布局适配。"
     }
   ]
 }

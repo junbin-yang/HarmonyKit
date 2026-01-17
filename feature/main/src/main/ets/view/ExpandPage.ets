@@ -1,5 +1,8 @@
+import { IBestCell, IBestCellGroup } from "ibestui";
+import { MediumPaddingVerticalScroll } from "designsystem";
 import { getWindowSafeAreaState, WindowSafeAreaState } from "state";
 import { AppNavDestination } from "ui";
+import { ExpandCardItem } from "../model/ExpandCardItem";
 import ExpandViewModel from "../viewmodel/ExpandViewModel";
 
 /**
@@ -43,6 +46,18 @@ export struct ExpandPage {
    */
   @Builder
   private ExpandContent() {
-    Text("扩展页面内容视图")
+    MediumPaddingVerticalScroll() {
+      IBestCellGroup({ inset: true, outerMargin: 0 }) {
+        ForEach(this.vm.cards, (item: ExpandCardItem, index: number) => {
+          IBestCell({
+            title: item.title,
+            label: item.description,
+            isLink: true,
+            hasBorder: index !== this.vm.cards.length - 1,
+            onCellClick: () => item.onClick()
+          });
+        }, (_item: ExpandCardItem, index: number) => `${index}`);
+      };
+    };
   }
 }

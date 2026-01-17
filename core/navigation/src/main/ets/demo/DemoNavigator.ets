@@ -1,6 +1,6 @@
 import { navigateTo, navigateToForResult } from "../NavigationService";
 import { DemoRoutes } from "./DemoRoutes";
-import { DemoGoodsIdParam } from "./DemoParam";
+import { DemoGoodsParam } from "./DemoParam";
 import type { DemoResult } from "./DemoResult";
 
 /**
@@ -59,10 +59,11 @@ export class DemoNavigator {
   /**
    * 跳转到带参跳转示例页
    * @param {number} goodsId - 商品 ID
+   * @param {Resource} goodsName - 商品名称
    * @returns {void} 无返回值
    */
-  static toNavigationWithArgs(goodsId: number): void {
-    const params: DemoGoodsIdParam = { goodsId };
+  static toNavigationWithArgs(goodsId: number, goodsName: Resource): void {
+    const params: DemoGoodsParam = { goodsId, goodsName };
     navigateTo(DemoRoutes.NavigationWithArgs, params);
   }
 
@@ -72,5 +73,21 @@ export class DemoNavigator {
    */
   static toNavigationResult(): Promise<DemoResult | undefined> {
     return navigateToForResult<DemoResult>(DemoRoutes.NavigationResult);
+  }
+
+  /**
+   * 跳转到安全区示例页
+   * @returns {void} 无返回值
+   */
+  static toSafeAreaDemo(): void {
+    navigateTo(DemoRoutes.SafeAreaDemo);
+  }
+
+  /**
+   * 跳转到屏幕适配示例页
+   * @returns {void} 无返回值
+   */
+  static toScreenAdaptDemo(): void {
+    navigateTo(DemoRoutes.ScreenAdaptDemo);
   }
 }

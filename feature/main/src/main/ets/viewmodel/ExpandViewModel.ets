@@ -1,4 +1,6 @@
 import { BaseViewModel } from "base";
+import { DemoNavigator } from "navigation";
+import { ExpandCardItem } from "../model/ExpandCardItem";
 
 /**
  * @file 扩展页面 ViewModel
@@ -6,4 +8,20 @@ import { BaseViewModel } from "base";
  */
 @ObservedV2
 export default class ExpandViewModel extends BaseViewModel {
+  /**
+   * 扩展模块卡片数据
+   */
+  @Trace
+  readonly cards: ExpandCardItem[] = [
+    {
+      title: $r("app.string.main_expand_safe_area_title"),
+      description: $r("app.string.main_expand_safe_area_desc"),
+      onClick: () => DemoNavigator.toSafeAreaDemo()
+    },
+    {
+      title: $r("app.string.main_expand_screen_adapt_title"),
+      description: $r("app.string.main_expand_screen_adapt_desc"),
+      onClick: () => DemoNavigator.toScreenAdaptDemo()
+    }
+  ];
 }
