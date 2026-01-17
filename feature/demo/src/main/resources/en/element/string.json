@@ -1,0 +1,12 @@
+{
+  "string": [
+    {
+      "name": "demo_base_network_title",
+      "value": "Base Network Demo"
+    },
+    {
+      "name": "demo_base_network_list_title",
+      "value": "Base Network List Demo"
+    }
+  ]
+}

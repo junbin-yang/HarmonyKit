@@ -1,4 +1,5 @@
-import { AppNavDestination } from "ui";
+import { ColumnCenter } from "designsystem";
+import { AppNavDestination, BaseNetWorkView } from "ui";
 import NetworkDemoViewModel from "../viewmodel/NetworkDemoViewModel";
 
 /**
@@ -19,19 +20,35 @@ export struct NetworkDemoPage {
    */
   build() {
     AppNavDestination({
-      title: "Network Demo 示例页",
+      title: $r("app.string.demo_base_network_title"),
       viewModel: this.vm
     }) {
-      this.NetworkDemoContent();
+      this.NetworkDemoLayout();
     }
   }
 
   /**
-   * Network Demo 示例页内容视图
+   * 构建网络示例布局
+   * @returns {void} 无返回值
+   */
+  @Builder
+  private NetworkDemoLayout() {
+    BaseNetWorkView({
+      uiState: this.vm.uiState,
+      onRetry: (): void => this.vm.retryRequest(),
+      content: (): void => this.NetworkDemoContent()
+    });
+  }
+
+  /**
+   * 构建网络示例内容
    * @returns {void} 无返回值
    */
   @Builder
   private NetworkDemoContent() {
-    Text("Network Demo 示例页内容视图")
+    ColumnCenter() {
+      Text(this.vm.data?.title ?? "")
+      Text(this.vm.data?.subTitle ?? "")
+    }
   }
 }

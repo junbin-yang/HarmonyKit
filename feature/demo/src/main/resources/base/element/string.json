@@ -1,0 +1,12 @@
+{
+  "string": [
+    {
+      "name": "demo_base_network_title",
+      "value": "Base Network 示例"
+    },
+    {
+      "name": "demo_base_network_list_title",
+      "value": "Base Network List 示例"
+    }
+  ]
+}
