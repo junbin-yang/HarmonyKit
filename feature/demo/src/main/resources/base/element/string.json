@@ -43,6 +43,30 @@
     {
       "name": "demo_database_untitled",
       "value": "未命名"
+    },
+    {
+      "name": "demo_local_storage_title",
+      "value": "本地存储示例"
+    },
+    {
+      "name": "demo_local_storage_account_label",
+      "value": "账号"
+    },
+    {
+      "name": "demo_local_storage_account_placeholder",
+      "value": "请输入账号"
+    },
+    {
+      "name": "demo_local_storage_action_save",
+      "value": "保存"
+    },
+    {
+      "name": "demo_local_storage_action_load",
+      "value": "读取"
+    },
+    {
+      "name": "demo_local_storage_value_empty",
+      "value": "未设置"
     }
   ]
 }

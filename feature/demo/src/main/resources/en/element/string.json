@@ -43,6 +43,30 @@
     {
       "name": "demo_database_untitled",
       "value": "Untitled"
+    },
+    {
+      "name": "demo_local_storage_title",
+      "value": "Local Storage Demo"
+    },
+    {
+      "name": "demo_local_storage_account_label",
+      "value": "Account"
+    },
+    {
+      "name": "demo_local_storage_account_placeholder",
+      "value": "Enter account"
+    },
+    {
+      "name": "demo_local_storage_action_save",
+      "value": "Save"
+    },
+    {
+      "name": "demo_local_storage_action_load",
+      "value": "Load"
+    },
+    {
+      "name": "demo_local_storage_value_empty",
+      "value": "Not set"
     }
   ]
 }
