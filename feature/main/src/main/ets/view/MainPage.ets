@@ -6,6 +6,7 @@ import {
 import MainViewModel from "../viewmodel/MainViewModel";
 import { CorePage } from "./CorePage";
 import { NavigationPage } from "./NavigationPage";
+import { ExpandPage } from "./ExpandPage";
 import { AboutPage } from "./AboutPage";
 
 /**
@@ -63,8 +64,12 @@ export struct MainPage {
       }.tabBar(this.tabBarItem(1));
 
       TabContent() {
-        AboutPage();
+        ExpandPage();
       }.tabBar(this.tabBarItem(2));
+
+      TabContent() {
+        AboutPage();
+      }.tabBar(this.tabBarItem(3));
     }
     .width(P100)
     .height(P100)

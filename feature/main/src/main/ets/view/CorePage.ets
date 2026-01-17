@@ -1,5 +1,9 @@
+import { IBestCell, IBestCellGroup } from "ibestui";
+import { MediumPaddingVerticalScroll } from "designsystem";
 import { AppNavDestination } from "ui";
 import CoreViewModel from "../viewmodel/CoreViewModel";
+import { CoreCardItem } from "../model/CoreCardItem";
+import { getWindowSafeAreaState, WindowSafeAreaState } from "state";
 
 /**
  * @file 核心页面视图
@@ -12,6 +16,11 @@ export struct CorePage {
    */
   @Local
   private vm: CoreViewModel = new CoreViewModel();
+  /**
+   * 窗口安全区状态
+   */
+  @Local
+  private windowSafeAreaState: WindowSafeAreaState = getWindowSafeAreaState();
 
   /**
    * 构建核心页面
@@ -19,8 +28,13 @@ export struct CorePage {
    */
   build() {
     AppNavDestination({
-      title: "核心",
-      viewModel: this.vm
+      title: $r("app.string.core"),
+      viewModel: this.vm,
+      paddingValue: {
+        top: this.windowSafeAreaState.topInset,
+        left: this.windowSafeAreaState.leftInset,
+        right: this.windowSafeAreaState.rightInset,
+      }
     }) {
       this.CoreContent();
     }
@@ -32,6 +46,18 @@ export struct CorePage {
    */
   @Builder
   private CoreContent() {
-    Text("核心页面内容视图")
+    MediumPaddingVerticalScroll() {
+      IBestCellGroup({ inset: true, outerMargin: 0 }) {
+        ForEach(this.vm.cards, (item: CoreCardItem, index: number) => {
+          IBestCell({
+            title: item.title,
+            label: item.description,
+            isLink: true,
+            hasBorder: index !== this.vm.cards.length - 1,
+            onCellClick: () => item.onClick()
+          });
+        }, (_item: CoreCardItem, index: number) => `${index}`);
+      };
+    };
   }
 }

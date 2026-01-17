@@ -18,6 +18,7 @@ export default class MainViewModel extends BaseViewModel {
   readonly tabItems: Array<MainTabItem> = [
     { title: $r("app.string.core"), icon: $r("app.media.ic_hardware") },
     { title: $r("app.string.navigation"), icon: $r("app.media.ic_route") },
+    { title: $r("app.string.expand"), icon: $r("app.media.ic_expand") },
     { title: $r("app.string.about"), icon: $r("app.media.ic_team") }
   ];
 

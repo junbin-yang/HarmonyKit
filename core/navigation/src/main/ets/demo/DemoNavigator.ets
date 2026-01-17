@@ -1,6 +1,7 @@
-import { navigateTo } from "../NavigationService";
+import { navigateTo, navigateToForResult } from "../NavigationService";
 import { DemoRoutes } from "./DemoRoutes";
 import { DemoGoodsIdParam } from "./DemoParam";
+import type { DemoResult } from "./DemoResult";
 
 /**
  * @file Demo 模块导航封装
@@ -67,9 +68,9 @@ export class DemoNavigator {
 
   /**
    * 跳转到结果回传示例页
-   * @returns {void} 无返回值
+   * @returns {Promise<DemoResult | undefined>} 返回结果 Promise
    */
-  static toNavigationResult(): void {
-    navigateTo(DemoRoutes.NavigationResult);
+  static toNavigationResult(): Promise<DemoResult | undefined> {
+    return navigateToForResult<DemoResult>(DemoRoutes.NavigationResult);
   }
 }

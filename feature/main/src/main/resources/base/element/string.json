@@ -11,6 +11,74 @@
     {
       "name": "about",
       "value": "关于"
+    },
+    {
+      "name": "expand",
+      "value": "扩展"
+    },
+    {
+      "name": "main_core_network_demo_title",
+      "value": "Network Demo"
+    },
+    {
+      "name": "main_core_network_demo_desc",
+      "value": "网络状态切换，包含加载、错误、重试等流程。"
+    },
+    {
+      "name": "main_core_network_list_demo_title",
+      "value": "Network List Demo"
+    },
+    {
+      "name": "main_core_network_list_demo_desc",
+      "value": "下拉刷新与分页加载的统一列表模板，内置空状态与重试。"
+    },
+    {
+      "name": "main_core_database_title",
+      "value": "数据库"
+    },
+    {
+      "name": "main_core_database_desc",
+      "value": "数据库增删改查示例，展示基础数据读写。"
+    },
+    {
+      "name": "main_core_local_storage_title",
+      "value": "本地存储"
+    },
+    {
+      "name": "main_core_local_storage_desc",
+      "value": "本地存储写入与清除示例，演示单值增删改查。"
+    },
+    {
+      "name": "main_core_state_management_title",
+      "value": "状态管理"
+    },
+    {
+      "name": "main_core_state_management_desc",
+      "value": "全局状态共享示例，展示跨页面同步。"
+    },
+    {
+      "name": "main_core_network_request_title",
+      "value": "网络请求"
+    },
+    {
+      "name": "main_core_network_request_desc",
+      "value": "通用请求流程示例，包含加载与错误处理。"
+    },
+    {
+      "name": "main_navigation_with_args_title",
+      "value": "带参跳转"
+    },
+    {
+      "name": "main_navigation_with_args_desc",
+      "value": "类型安全路由参数，包含商品 ID 传参。"
+    },
+    {
+      "name": "main_navigation_result_title",
+      "value": "结果回传"
+    },
+    {
+      "name": "main_navigation_result_desc",
+      "value": "页面结果回传示例，返回刷新标记等数据。"
     }
   ]
 }

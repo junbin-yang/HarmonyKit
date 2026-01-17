@@ -11,6 +11,74 @@
     {
       "name": "about",
       "value": "About"
+    },
+    {
+      "name": "expand",
+      "value": "Expand"
+    },
+    {
+      "name": "main_core_network_demo_title",
+      "value": "Network Demo"
+    },
+    {
+      "name": "main_core_network_demo_desc",
+      "value": "Network state switching with loading, error, and retry flow."
+    },
+    {
+      "name": "main_core_network_list_demo_title",
+      "value": "Network List Demo"
+    },
+    {
+      "name": "main_core_network_list_demo_desc",
+      "value": "Unified list with pull-to-refresh and paging, built-in empty state and retry."
+    },
+    {
+      "name": "main_core_database_title",
+      "value": "Database"
+    },
+    {
+      "name": "main_core_database_desc",
+      "value": "Basic CRUD demo with simple data read and write."
+    },
+    {
+      "name": "main_core_local_storage_title",
+      "value": "Local Storage"
+    },
+    {
+      "name": "main_core_local_storage_desc",
+      "value": "Local storage write/clear demo with simple CRUD."
+    },
+    {
+      "name": "main_core_state_management_title",
+      "value": "State Management"
+    },
+    {
+      "name": "main_core_state_management_desc",
+      "value": "Global state sharing demo across pages."
+    },
+    {
+      "name": "main_core_network_request_title",
+      "value": "Network Request"
+    },
+    {
+      "name": "main_core_network_request_desc",
+      "value": "Common request flow with loading and error handling."
+    },
+    {
+      "name": "main_navigation_with_args_title",
+      "value": "Navigation With Args"
+    },
+    {
+      "name": "main_navigation_with_args_desc",
+      "value": "Type-safe route params with goods ID."
+    },
+    {
+      "name": "main_navigation_result_title",
+      "value": "Navigation Result"
+    },
+    {
+      "name": "main_navigation_result_desc",
+      "value": "Result return demo with refresh flag and data."
     }
   ]
 }

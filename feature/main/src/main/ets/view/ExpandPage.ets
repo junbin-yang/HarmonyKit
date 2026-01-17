@@ -1,18 +1,18 @@
 import { getWindowSafeAreaState, WindowSafeAreaState } from "state";
 import { AppNavDestination } from "ui";
-import AboutViewModel from "../viewmodel/AboutViewModel";
+import ExpandViewModel from "../viewmodel/ExpandViewModel";
 
 /**
- * @file 关于页面视图
+ * @file 扩展页面视图
  * @author Joker.X
  */
 @ComponentV2
-export struct AboutPage {
+export struct ExpandPage {
   /**
-   * 关于页面 ViewModel
+   * 扩展页面 ViewModel
    */
   @Local
-  private vm: AboutViewModel = new AboutViewModel();
+  private vm: ExpandViewModel = new ExpandViewModel();
   /**
    * 窗口安全区状态
    */
@@ -20,12 +20,12 @@ export struct AboutPage {
   private windowSafeAreaState: WindowSafeAreaState = getWindowSafeAreaState();
 
   /**
-   * 构建关于页面
+   * 构建扩展页面
    * @returns {void} 无返回值
    */
   build() {
     AppNavDestination({
-      title: $r("app.string.about"),
+      title: $r("app.string.expand"),
       viewModel: this.vm,
       paddingValue: {
         top: this.windowSafeAreaState.topInset,
@@ -33,16 +33,16 @@ export struct AboutPage {
         right: this.windowSafeAreaState.rightInset,
       }
     }) {
-      this.AboutContent();
+      this.ExpandContent();
     }
   }
 
   /**
-   * 关于页面内容视图
+   * 扩展页面内容视图
    * @returns {void} 无返回值
    */
   @Builder
-  private AboutContent() {
-    Text("关于页面内容视图")
+  private ExpandContent() {
+    Text("扩展页面内容视图")
   }
 }

@@ -13,11 +13,15 @@ export { MainNavigator } from "./src/main/ets/main/MainNavigator";
 
 export { UserNavigator } from "./src/main/ets/user/UserNavigator";
 
+export { DemoNavigator } from "./src/main/ets/demo/DemoNavigator";
+
 export { IdParam } from "./src/main/ets/NavigationParam";
 
 export { UserAddressDetailParam, UserAddressListParam } from "./src/main/ets/user/UserParam";
 
 export { RefreshResult } from "./src/main/ets/NavigationResult";
+
+export { DemoResult } from "./src/main/ets/demo/DemoResult";
 
 export {
   NAV_PATH_STACK_KEY,
