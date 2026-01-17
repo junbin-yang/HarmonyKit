@@ -7,6 +7,42 @@
     {
       "name": "demo_base_network_list_title",
       "value": "Base Network List Demo"
+    },
+    {
+      "name": "demo_database_title",
+      "value": "Database Demo"
+    },
+    {
+      "name": "demo_database_title_label",
+      "value": "Title"
+    },
+    {
+      "name": "demo_database_title_placeholder",
+      "value": "Enter title"
+    },
+    {
+      "name": "demo_database_desc_label",
+      "value": "Description"
+    },
+    {
+      "name": "demo_database_desc_placeholder",
+      "value": "Enter description (optional)"
+    },
+    {
+      "name": "demo_database_action_save",
+      "value": "Save"
+    },
+    {
+      "name": "demo_database_action_delete",
+      "value": "Delete"
+    },
+    {
+      "name": "demo_database_empty",
+      "value": "No data"
+    },
+    {
+      "name": "demo_database_untitled",
+      "value": "Untitled"
     }
   ]
 }
