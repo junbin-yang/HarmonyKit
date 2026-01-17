@@ -4,3 +4,9 @@
  */
 
 export { IBestORMInit } from "@ibestservices/ibest-orm";
+
+export { DemoLocalDataSource } from "./src/main/ets/datasource/demo/DemoLocalDataSource";
+
+export { DemoLocalDataSourceImpl } from "./src/main/ets/datasource/demo/DemoLocalDataSourceImpl";
+
+export { DemoEntity } from "./src/main/ets/entity/DemoEntity";

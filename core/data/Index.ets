@@ -3,10 +3,14 @@
  * @author Joker.X
  */
 
-export { AuthRepository } from './src/main/ets/repository/AuthRepository';
+export { AuthRepository } from "./src/main/ets/repository/AuthRepository";
 
-export { GoodsRepository } from './src/main/ets/repository/GoodsRepository';
+export { GoodsRepository } from "./src/main/ets/repository/GoodsRepository";
 
-export { UserInfoRepository } from './src/main/ets/repository/UserInfoRepository';
+export { UserInfoRepository } from "./src/main/ets/repository/UserInfoRepository";
 
-export { TokenStoreRepository } from './src/main/ets/repository/TokenStoreRepository';
+export { TokenStoreRepository } from "./src/main/ets/repository/TokenStoreRepository";
+
+export { DemoRepository } from "./src/main/ets/repository/DemoRepository";
+
+export { DemoEntity } from "database";
