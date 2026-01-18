@@ -1,6 +1,10 @@
 {
   "string": [
     {
+      "name": "app_name",
+      "value": "HarmonyProject"
+    },
+    {
       "name": "core",
       "value": "Core"
     },
@@ -17,12 +21,72 @@
       "value": "Expand"
     },
     {
+      "name": "main_about_desc",
+      "value": "An elegant HarmonyOS rapid development framework."
+    },
+    {
+      "name": "main_about_link_github_title",
+      "value": "GitHub"
+    },
+    {
+      "name": "main_about_link_github_url",
+      "value": "https://github.com/Joker-x-dev/HarmonyProject"
+    },
+    {
+      "name": "main_about_link_gitee_title",
+      "value": "Gitee"
+    },
+    {
+      "name": "main_about_link_gitee_url",
+      "value": "https://gitee.com/Joker-x-dev/HarmonyProject"
+    },
+    {
+      "name": "main_about_link_ui_title",
+      "value": "IBest-UI-V2"
+    },
+    {
+      "name": "main_about_link_ui_url",
+      "value": "https://ibestui-v2.ibestservices.com"
+    },
+    {
+      "name": "main_about_link_orm_title",
+      "value": "IBest-ORM"
+    },
+    {
+      "name": "main_about_link_orm_url",
+      "value": "https://ibest-orm.ibestservices.com"
+    },
+    {
+      "name": "main_about_link_doc_title",
+      "value": "Framework Docs"
+    },
+    {
+      "name": "main_about_link_doc_url",
+      "value": "https://harmony.dusksnow.top"
+    },
+    {
+      "name": "main_about_link_demo_github_title",
+      "value": "青商城 GitHub"
+    },
+    {
+      "name": "main_about_link_demo_github_url",
+      "value": "https://github.com/Joker-x-dev/CoolMallArkTS"
+    },
+    {
+      "name": "main_about_link_demo_gitee_title",
+      "value": "青商城 Gitee"
+    },
+    {
+      "name": "main_about_link_demo_gitee_url",
+      "value": "https://gitee.com/Joker-x-dev/CoolMallArkTS"
+    },
+    {
       "name": "main_core_network_demo_title",
       "value": "Network Demo"
     },
     {
       "name": "main_core_network_demo_desc",
-      "value": "Basic network request (Base Network) demo."
+      "value": "Unifies loading/error/success UI so you only provide data."
     },
     {
       "name": "main_core_network_list_demo_title",
@@ -30,7 +94,7 @@
     },
     {
       "name": "main_core_network_list_demo_desc",
-      "value": "Basic list request (Base List) demo."
+      "value": "Paged list handles empty/error/loading; you focus on render."
     },
     {
       "name": "main_core_database_title",

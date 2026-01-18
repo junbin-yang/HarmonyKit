@@ -1,5 +1,17 @@
+import { IBestCell, IBestCellGroup } from "ibestui";
+import {
+  ColumnBase,
+  MediumPaddingVerticalScroll,
+  P100,
+  P90,
+  columnCenter,
+  size,
+  SpaceVerticalLarge,
+  SpaceVerticalSmall
+} from "designsystem";
 import { getWindowSafeAreaState, WindowSafeAreaState } from "state";
 import { AppNavDestination } from "ui";
+import { AboutLinkItem } from "../model/AboutLinkItem";
 import AboutViewModel from "../viewmodel/AboutViewModel";
 
 /**
@@ -43,6 +55,64 @@ export struct AboutPage {
    */
   @Builder
   private AboutContent() {
-    Text("关于页面内容视图")
+    MediumPaddingVerticalScroll() {
+      ColumnBase({ widthValue: P100 }) {
+        this.AboutHeader();
+        SpaceVerticalLarge();
+        this.AboutLinks();
+      };
+    };
+  }
+
+  /**
+   * 关于页面头部
+   * @returns {void} 无返回值
+   */
+  @Builder
+  private AboutHeader(): void {
+    Column() {
+      Image($r("app.media.ic_logo"))
+        .attributeModifier(size(72))
+        .objectFit(ImageFit.Contain);
+
+      SpaceVerticalSmall();
+
+      Text($r("app.string.app_name"))
+        .fontSize($r("app.float.headline_medium"))
+        .fontColor($r("app.color.text_primary"))
+        .fontWeight(FontWeight.Bold);
+
+      SpaceVerticalSmall();
+
+      Text($r("app.string.main_about_desc"))
+        .fontSize($r("app.float.body_medium"))
+        .fontColor($r("app.color.text_subtitle"))
+        .textAlign(TextAlign.Center);
+    }
+    .attributeModifier(columnCenter())
+    .width(P100)
+    .padding($r("app.float.space_padding_medium"))
+    .backgroundColor($r("app.color.bg_white"))
+    .borderRadius($r("app.float.radius_medium"));
+  }
+
+  /**
+   * 关于页面链接区
+   * @returns {void} 无返回值
+   */
+  @Builder
+  private AboutLinks(): void {
+    IBestCellGroup({ inset: true, outerMargin: 0 }) {
+      ForEach(this.vm.links, (item: AboutLinkItem, index: number) => {
+        IBestCell({
+          title: item.title,
+          label: item.url,
+          isLink: true,
+          leftContentWidth: P90,
+          hasBorder: index !== this.vm.links.length - 1,
+          onCellClick: () => this.vm.openUrl(item.url)
+        });
+      }, (_item: AboutLinkItem, index: number) => `${index}`);
+    };
   }
 }
