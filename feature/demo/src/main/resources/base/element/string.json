@@ -69,6 +69,26 @@
       "value": "未设置"
     },
     {
+      "name": "demo_network_request_title",
+      "value": "网络请求"
+    },
+    {
+      "name": "demo_network_request_get_action",
+      "value": "GET 请求"
+    },
+    {
+      "name": "demo_network_request_post_action",
+      "value": "POST 请求"
+    },
+    {
+      "name": "demo_network_request_get_success",
+      "value": "请求成功 商品标题为: %s"
+    },
+    {
+      "name": "demo_network_request_post_success",
+      "value": "POST 请求成功"
+    },
+    {
       "name": "demo_state_management_title",
       "value": "状态管理示例"
     },

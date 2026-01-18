@@ -1,3 +1,5 @@
+import { IBestButton } from "ibestui";
+import { ColumnBase, MediumPaddingVerticalScroll, P100, SpaceVerticalLarge } from "designsystem";
 import { AppNavDestination } from "ui";
 import NetworkRequestViewModel from "../viewmodel/NetworkRequestViewModel";
 
@@ -19,7 +21,7 @@ export struct NetworkRequestPage {
    */
   build() {
     AppNavDestination({
-      title: "通用网络请求示例页",
+      title: $r("app.string.demo_network_request_title"),
       viewModel: this.vm
     }) {
       this.NetworkRequestContent();
@@ -32,6 +34,37 @@ export struct NetworkRequestPage {
    */
   @Builder
   private NetworkRequestContent() {
-    Text("通用网络请求示例页内容视图")
+    MediumPaddingVerticalScroll() {
+      ColumnBase({ widthValue: P100 }) {
+        IBestButton({
+          text: $r("app.string.demo_network_request_get_action"),
+          type: "primary",
+          buttonSize: "normal",
+          btnWidth: P100,
+          round: true,
+          loading: this.vm.getLoading,
+          disabled: this.vm.getLoading,
+          onBtnClick: (): void => {
+            this.vm.requestGoodsDetail();
+          }
+        });
+
+        SpaceVerticalLarge();
+
+        IBestButton({
+          text: $r("app.string.demo_network_request_post_action"),
+          type: "default",
+          plain: true,
+          buttonSize: "normal",
+          btnWidth: P100,
+          round: true,
+          loading: this.vm.postLoading,
+          disabled: this.vm.postLoading,
+          onBtnClick: (): void => {
+            this.vm.requestGoodsList();
+          }
+        });
+      };
+    };
   }
 }

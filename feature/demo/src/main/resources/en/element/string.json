@@ -69,6 +69,26 @@
       "value": "Not set"
     },
     {
+      "name": "demo_network_request_title",
+      "value": "Network Request"
+    },
+    {
+      "name": "demo_network_request_get_action",
+      "value": "GET Request"
+    },
+    {
+      "name": "demo_network_request_post_action",
+      "value": "POST Request"
+    },
+    {
+      "name": "demo_network_request_get_success",
+      "value": "Request succeeded, title: %s"
+    },
+    {
+      "name": "demo_network_request_post_success",
+      "value": "POST request succeeded"
+    },
+    {
       "name": "demo_state_management_title",
       "value": "State Management Demo"
     },
