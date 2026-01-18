@@ -89,6 +89,18 @@
       "value": "Type-safe result using DemoResult."
     },
     {
+      "name": "main_navigation_result_title_label",
+      "value": "Result Title"
+    },
+    {
+      "name": "main_navigation_result_desc_label",
+      "value": "Result Description"
+    },
+    {
+      "name": "main_navigation_result_value_empty",
+      "value": "No result returned"
+    },
+    {
       "name": "main_navigation_intercept_title",
       "value": "Navigation Intercept"
     },

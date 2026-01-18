@@ -89,6 +89,18 @@
       "value": "类型安全返回结果，数据结构为 DemoResult。"
     },
     {
+      "name": "main_navigation_result_title_label",
+      "value": "回传标题"
+    },
+    {
+      "name": "main_navigation_result_desc_label",
+      "value": "回传说明"
+    },
+    {
+      "name": "main_navigation_result_value_empty",
+      "value": "未收到返回参数"
+    },
+    {
       "name": "main_navigation_intercept_title",
       "value": "导航拦截"
     },

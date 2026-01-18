@@ -1,9 +1,9 @@
 import { IBestCell, IBestCellGroup } from "ibestui";
-import { MediumPaddingVerticalScroll } from "designsystem";
+import { ColumnBase, MediumPaddingVerticalScroll, P100, SpaceVerticalLarge } from "designsystem";
 import { AppNavDestination } from "ui";
+import { getWindowSafeAreaState, WindowSafeAreaState } from "state";
 import NavigationViewModel from "../viewmodel/NavigationViewModel";
 import { NavigationCardItem } from "../model/NavigationCardItem";
-import { getWindowSafeAreaState, WindowSafeAreaState } from "state";
 
 /**
  * @file 导航页面视图
@@ -47,17 +47,52 @@ export struct NavigationPage {
   @Builder
   private NavigationContent() {
     MediumPaddingVerticalScroll() {
-      IBestCellGroup({ inset: true, outerMargin: 0 }) {
-        ForEach(this.vm.cards, (item: NavigationCardItem, index: number) => {
-          IBestCell({
-            title: item.title,
-            label: item.description,
-            isLink: true,
-            hasBorder: index !== this.vm.cards.length - 1,
-            onCellClick: () => item.onClick()
-          });
-        }, (_item: NavigationCardItem, index: number) => `${index}`);
+      ColumnBase({ widthValue: P100 }) {
+        if (this.vm.hasResult) {
+          this.ResultSection();
+          SpaceVerticalLarge();
+        }
+
+        IBestCellGroup({ inset: true, outerMargin: 0 }) {
+          ForEach(this.vm.cards, (item: NavigationCardItem, index: number) => {
+            IBestCell({
+              title: item.title,
+              label: item.description,
+              isLink: true,
+              hasBorder: index !== this.vm.cards.length - 1,
+              onCellClick: () => item.onClick()
+            });
+          }, (_item: NavigationCardItem, index: number) => `${index}`);
+        };
       };
     };
+  }
+
+  /**
+   * 结果回传展示区
+   * @returns {void} 无返回值
+   */
+  @Builder
+  private ResultSection(): void {
+    if (this.vm.shouldShowResult()) {
+      IBestCellGroup({ inset: true, outerMargin: 0 }) {
+        if (this.vm.hasResultTitle()) {
+          IBestCell({
+            title: $r("app.string.main_navigation_result_title_label"),
+            label: this.vm.resultTitle,
+            isLink: false,
+            hasBorder: this.vm.hasResultDesc()
+          });
+        }
+        if (this.vm.hasResultDesc()) {
+          IBestCell({
+            title: $r("app.string.main_navigation_result_desc_label"),
+            label: this.vm.resultDescription,
+            isLink: false,
+            hasBorder: false
+          });
+        }
+      };
+    }
   }
 }

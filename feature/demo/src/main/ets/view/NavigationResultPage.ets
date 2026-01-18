@@ -1,3 +1,5 @@
+import { IBestButton, IBestCellGroup, IBestField, IBestFieldValueType } from "ibestui";
+import { ColumnBase, MediumPaddingVerticalScroll, P100, RowStartCenter, SpaceVerticalMedium } from "designsystem";
 import { AppNavDestination } from "ui";
 import NavigationResultViewModel from "../viewmodel/NavigationResultViewModel";
 
@@ -19,7 +21,7 @@ export struct NavigationResultPage {
    */
   build() {
     AppNavDestination({
-      title: "结果回传示例页",
+      title: $r("app.string.demo_navigation_result_title"),
       viewModel: this.vm
     }) {
       this.NavigationResultContent();
@@ -32,6 +34,54 @@ export struct NavigationResultPage {
    */
   @Builder
   private NavigationResultContent() {
-    Text("结果回传示例页内容视图")
+    MediumPaddingVerticalScroll() {
+      ColumnBase({ widthValue: P100 }) {
+        this.InputSection();
+      };
+    };
+  }
+
+  /**
+   * 输入区域
+   * @returns {void} 无返回值
+   */
+  @Builder
+  private InputSection(): void {
+    ColumnBase({ widthValue: P100 }) {
+      IBestCellGroup({ inset: true, outerMargin: 0 }) {
+        IBestField({
+          value: this.vm.titleInput,
+          label: $r("app.string.demo_navigation_result_title_label"),
+          placeholder: $r("app.string.demo_navigation_result_title_placeholder"),
+          onChange: (value: IBestFieldValueType): void => {
+            this.vm.updateTitleInput(value.toString());
+          }
+        });
+        IBestField({
+          value: this.vm.descInput,
+          label: $r("app.string.demo_navigation_result_desc_label"),
+          placeholder: $r("app.string.demo_navigation_result_desc_placeholder"),
+          hasBorder: false,
+          onChange: (value: IBestFieldValueType): void => {
+            this.vm.updateDescInput(value.toString());
+          }
+        });
+      };
+
+      SpaceVerticalMedium();
+
+      RowStartCenter() {
+        IBestButton({
+          text: $r("app.string.demo_navigation_result_action_submit"),
+          type: "primary",
+          buttonSize: "large",
+          round: true,
+          btnWidth: P100,
+          onBtnClick: (): void => {
+            this.vm.submitResult();
+          }
+        });
+      };
+    };
   }
 }

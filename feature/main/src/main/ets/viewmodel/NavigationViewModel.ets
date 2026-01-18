@@ -1,5 +1,5 @@
 import { BaseViewModel } from "base";
-import { DemoNavigator, UserNavigator } from "navigation";
+import { DemoNavigator, DemoResult, UserNavigator } from "navigation";
 import { NavigationCardItem } from "../model/NavigationCardItem";
 
 /**
@@ -8,6 +8,21 @@ import { NavigationCardItem } from "../model/NavigationCardItem";
  */
 @ObservedV2
 export default class NavigationViewModel extends BaseViewModel {
+  /**
+   * 结果回传标题
+   */
+  @Trace
+  resultTitle: string = "";
+  /**
+   * 结果回传说明
+   */
+  @Trace
+  resultDescription: string = "";
+  /**
+   * 是否存在结果回传
+   */
+  @Trace
+  hasResult: boolean = false;
   /**
    * 导航模块卡片数据
    */
@@ -21,9 +36,7 @@ export default class NavigationViewModel extends BaseViewModel {
     {
       title: $r("app.string.main_navigation_result_title"),
       description: $r("app.string.main_navigation_result_desc"),
-      onClick: () => {
-        DemoNavigator.toNavigationResult();
-      }
+      onClick: (): void => this.requestNavigationResult()
     },
     {
       title: $r("app.string.main_navigation_intercept_title"),
@@ -31,4 +44,57 @@ export default class NavigationViewModel extends BaseViewModel {
       onClick: () => UserNavigator.toProfile()
     }
   ];
+
+  /**
+   * 发起结果回传跳转
+   * @returns {void} 无返回值
+   */
+  requestNavigationResult(): void {
+    DemoNavigator.toNavigationResult()
+      .then((result?: DemoResult): void => {
+        const title: string = result?.title?.trim() ?? "";
+        const description: string = result?.description?.trim() ?? "";
+        if (title.length === 0 && description.length === 0) {
+          this.clearResult();
+          return;
+        }
+        this.resultTitle = title;
+        this.resultDescription = description;
+        this.hasResult = true;
+      });
+  }
+
+  /**
+   * 清空回传结果
+   * @returns {void} 无返回值
+   */
+  private clearResult(): void {
+    this.resultTitle = "";
+    this.resultDescription = "";
+    this.hasResult = false;
+  }
+
+  /**
+   * 是否展示结果区域
+   * @returns {boolean} 是否展示
+   */
+  shouldShowResult(): boolean {
+    return this.hasResultTitle() || this.hasResultDesc();
+  }
+
+  /**
+   * 是否存在结果标题
+   * @returns {boolean} 是否存在
+   */
+  hasResultTitle(): boolean {
+    return this.resultTitle.length > 0;
+  }
+
+  /**
+   * 是否存在结果说明
+   * @returns {boolean} 是否存在
+   */
+  hasResultDesc(): boolean {
+    return this.resultDescription.length > 0;
+  }
 }
