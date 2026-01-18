@@ -1,9 +1,9 @@
 import { IBestCell, IBestCellGroup } from "ibestui";
-import { MediumPaddingVerticalScroll } from "designsystem";
+import { ColumnBase, MediumPaddingVerticalScroll, P100, SpaceVerticalLarge, SpaceVerticalSmall } from "designsystem";
 import { AppNavDestination } from "ui";
 import CoreViewModel from "../viewmodel/CoreViewModel";
 import { CoreCardItem } from "../model/CoreCardItem";
-import { getWindowSafeAreaState, WindowSafeAreaState } from "state";
+import { DemoCounterState, getDemoCounterState, getWindowSafeAreaState, WindowSafeAreaState } from "state";
 
 /**
  * @file 核心页面视图
@@ -21,6 +21,11 @@ export struct CorePage {
    */
   @Local
   private windowSafeAreaState: WindowSafeAreaState = getWindowSafeAreaState();
+  /**
+   * 全局计数器状态
+   */
+  @Local
+  private counterState: DemoCounterState = getDemoCounterState();
 
   /**
    * 构建核心页面
@@ -47,17 +52,50 @@ export struct CorePage {
   @Builder
   private CoreContent() {
     MediumPaddingVerticalScroll() {
-      IBestCellGroup({ inset: true, outerMargin: 0 }) {
-        ForEach(this.vm.cards, (item: CoreCardItem, index: number) => {
-          IBestCell({
-            title: item.title,
-            label: item.description,
-            isLink: true,
-            hasBorder: index !== this.vm.cards.length - 1,
-            onCellClick: () => item.onClick()
-          });
-        }, (_item: CoreCardItem, index: number) => `${index}`);
+      ColumnBase({ widthValue: P100 }) {
+        if (this.counterState.count > 0) {
+          this.CounterCard();
+          SpaceVerticalLarge();
+        }
+
+        IBestCellGroup({ inset: true, outerMargin: 0 }) {
+          ForEach(this.vm.cards, (item: CoreCardItem, index: number) => {
+            IBestCell({
+              title: item.title,
+              label: item.description,
+              isLink: true,
+              hasBorder: index !== this.vm.cards.length - 1,
+              onCellClick: () => item.onClick()
+            });
+          }, (_item: CoreCardItem, index: number) => `${index}`);
+        };
       };
     };
+  }
+
+  /**
+   * 计数器卡片
+   * @returns {void} 无返回值
+   */
+  @Builder
+  private CounterCard(): void {
+    Column() {
+      ColumnBase({ widthValue: P100 }) {
+        Text($r("app.string.main_core_counter_label"))
+          .fontSize($r("app.float.body_medium"))
+          .fontColor($r("app.color.text_subtitle"));
+
+        SpaceVerticalSmall();
+
+        Text(`${this.counterState.count}`)
+          .fontSize($r("app.float.display_large"))
+          .fontColor($r("app.color.text_primary"))
+          .fontWeight(FontWeight.Bold);
+      };
+    }
+    .width(P100)
+    .padding($r("app.float.space_padding_medium"))
+    .backgroundColor($r("app.color.bg_white"))
+    .borderRadius($r("app.float.radius_medium"));
   }
 }

@@ -67,6 +67,26 @@
     {
       "name": "demo_local_storage_value_empty",
       "value": "未设置"
+    },
+    {
+      "name": "demo_state_management_title",
+      "value": "状态管理示例"
+    },
+    {
+      "name": "demo_state_management_count_label",
+      "value": "当前计数"
+    },
+    {
+      "name": "demo_state_management_action_decrement",
+      "value": "－"
+    },
+    {
+      "name": "demo_state_management_action_increment",
+      "value": "＋"
+    },
+    {
+      "name": "demo_state_management_action_reset",
+      "value": "重置"
     }
   ]
 }

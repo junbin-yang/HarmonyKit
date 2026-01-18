@@ -18,6 +18,12 @@ export {
 } from "./src/main/ets/WindowSafeAreaState";
 
 export {
+  DEMO_COUNTER_KEY,
+  DemoCounterState,
+  getDemoCounterState
+} from "./src/main/ets/DemoCounterState";
+
+export {
   BreakpointType,
   type BreakpointRule,
   type BreakpointValueOptions

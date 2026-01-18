@@ -67,6 +67,26 @@
     {
       "name": "demo_local_storage_value_empty",
       "value": "Not set"
+    },
+    {
+      "name": "demo_state_management_title",
+      "value": "State Management Demo"
+    },
+    {
+      "name": "demo_state_management_count_label",
+      "value": "Current Count"
+    },
+    {
+      "name": "demo_state_management_action_decrement",
+      "value": "-"
+    },
+    {
+      "name": "demo_state_management_action_increment",
+      "value": "+"
+    },
+    {
+      "name": "demo_state_management_action_reset",
+      "value": "Reset"
     }
   ]
 }

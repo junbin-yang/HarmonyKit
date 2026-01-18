@@ -57,6 +57,10 @@
       "value": "全局状态共享示例，展示跨页面同步。"
     },
     {
+      "name": "main_core_counter_label",
+      "value": "当前计数"
+    },
+    {
       "name": "main_core_network_request_title",
       "value": "网络请求"
     },

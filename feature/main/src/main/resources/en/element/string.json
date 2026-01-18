@@ -57,6 +57,10 @@
       "value": "Global state sharing demo across pages."
     },
     {
+      "name": "main_core_counter_label",
+      "value": "Current Count"
+    },
+    {
       "name": "main_core_network_request_title",
       "value": "Network Request"
     },
