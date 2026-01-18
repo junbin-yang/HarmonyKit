@@ -1,5 +1,5 @@
 import { IBestCell, IBestCellGroup } from "ibestui";
-import { ColumnBase, MediumPaddingVerticalScroll, P100, SpaceVerticalLarge } from "designsystem";
+import { ColumnBase, MediumPaddingVerticalScroll, P100, P80, SpaceVerticalLarge } from "designsystem";
 import { AppNavDestination } from "ui";
 import { getWindowSafeAreaState, WindowSafeAreaState } from "state";
 import NavigationViewModel from "../viewmodel/NavigationViewModel";
@@ -59,6 +59,7 @@ export struct NavigationPage {
               title: item.title,
               label: item.description,
               isLink: true,
+              leftContentWidth: P80,
               hasBorder: index !== this.vm.cards.length - 1,
               onCellClick: () => item.onClick()
             });

@@ -1,5 +1,12 @@
 import { IBestCell, IBestCellGroup } from "ibestui";
-import { ColumnBase, MediumPaddingVerticalScroll, P100, SpaceVerticalLarge, SpaceVerticalSmall } from "designsystem";
+import {
+  ColumnBase,
+  MediumPaddingVerticalScroll,
+  P100,
+  P80,
+  SpaceVerticalLarge,
+  SpaceVerticalSmall
+} from "designsystem";
 import { AppNavDestination } from "ui";
 import CoreViewModel from "../viewmodel/CoreViewModel";
 import { CoreCardItem } from "../model/CoreCardItem";
@@ -64,6 +71,7 @@ export struct CorePage {
               title: item.title,
               label: item.description,
               isLink: true,
+              leftContentWidth: P80,
               hasBorder: index !== this.vm.cards.length - 1,
               onCellClick: () => item.onClick()
             });

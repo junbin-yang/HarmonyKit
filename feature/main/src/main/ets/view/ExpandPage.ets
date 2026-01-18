@@ -1,5 +1,5 @@
 import { IBestCell, IBestCellGroup } from "ibestui";
-import { MediumPaddingVerticalScroll } from "designsystem";
+import { MediumPaddingVerticalScroll, P80 } from "designsystem";
 import { getWindowSafeAreaState, WindowSafeAreaState } from "state";
 import { AppNavDestination } from "ui";
 import { ExpandCardItem } from "../model/ExpandCardItem";
@@ -53,6 +53,7 @@ export struct ExpandPage {
             title: item.title,
             label: item.description,
             isLink: true,
+            leftContentWidth: P80,
             hasBorder: index !== this.vm.cards.length - 1,
             onCellClick: () => item.onClick()
           });
