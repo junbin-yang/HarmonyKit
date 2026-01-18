@@ -109,6 +109,10 @@
       "value": "未登录跳转登录页，登录后进入用户资料页。"
     },
     {
+      "name": "main_navigation_logged_in",
+      "value": "已登录"
+    },
+    {
       "name": "main_expand_safe_area_title",
       "value": "安全区"
     },

@@ -109,6 +109,10 @@
       "value": "If not logged in, go to Login; after login, open Profile."
     },
     {
+      "name": "main_navigation_logged_in",
+      "value": "Logged in"
+    },
+    {
       "name": "main_expand_safe_area_title",
       "value": "Safe Area"
     },

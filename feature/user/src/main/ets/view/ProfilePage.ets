@@ -1,3 +1,5 @@
+import { IBestButton, IBestCell, IBestCellGroup } from "ibestui";
+import { ColumnBase, MediumPaddingVerticalScroll, P100, SpaceVerticalLarge } from "designsystem";
 import { AppNavDestination } from "ui";
 import ProfileViewModel from "../viewmodel/ProfileViewModel";
 
@@ -19,7 +21,7 @@ export struct ProfilePage {
    */
   build() {
     AppNavDestination({
-      title: "个人中心",
+      title: $r("app.string.user_profile_title"),
       viewModel: this.vm
     }) {
       this.ProfileContent();
@@ -32,6 +34,39 @@ export struct ProfilePage {
    */
   @Builder
   private ProfileContent() {
-    Text("个人中心内容视图")
+    MediumPaddingVerticalScroll() {
+      ColumnBase({ widthValue: P100 }) {
+        IBestCellGroup({ inset: true, outerMargin: 0 }) {
+          IBestCell({
+            title: $r("app.string.user_profile_nickname_label"),
+            value: this.vm.getDisplayNickName(),
+            hasBorder: true
+          });
+          IBestCell({
+            title: $r("app.string.user_profile_id_label"),
+            value: this.vm.getDisplayUserId(),
+            hasBorder: true
+          });
+          IBestCell({
+            title: $r("app.string.user_profile_phone_label"),
+            value: this.vm.getDisplayPhone(),
+            hasBorder: false
+          });
+        };
+
+        SpaceVerticalLarge();
+
+        IBestButton({
+          text: $r("app.string.user_profile_logout_action"),
+          round: true,
+          type: "primary",
+          buttonSize: "normal",
+          btnWidth: P100,
+          onBtnClick: (): void => {
+            this.vm.logout();
+          }
+        });
+      };
+    };
   }
 }

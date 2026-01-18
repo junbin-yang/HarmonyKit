@@ -1,3 +1,5 @@
+import { IBestButton } from "ibestui";
+import { ColumnBase, MediumPaddingVerticalScroll, P100 } from "designsystem";
 import { AppNavDestination } from "ui";
 import LoginViewModel from "../viewmodel/LoginViewModel";
 
@@ -19,7 +21,7 @@ export struct LoginPage {
    */
   build() {
     AppNavDestination({
-      title: "登录页",
+      title: $r("app.string.login_title"),
       viewModel: this.vm
     }) {
       this.LoginContent();
@@ -32,6 +34,21 @@ export struct LoginPage {
    */
   @Builder
   private LoginContent() {
-    Text("登录页内容视图")
+    MediumPaddingVerticalScroll() {
+      ColumnBase({ widthValue: P100 }) {
+        IBestButton({
+          text: $r("app.string.login_action"),
+          type: "primary",
+          buttonSize: "large",
+          round: true,
+          btnWidth: P100,
+          loading: this.vm.isLoginLoading,
+          disabled: this.vm.isLoginLoading,
+          onBtnClick: (): void => {
+            this.vm.login();
+          }
+        });
+      };
+    };
   }
 }

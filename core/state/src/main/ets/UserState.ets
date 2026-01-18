@@ -30,7 +30,7 @@ export class UserState {
    */
   @Type(User)
   @Trace
-  private userInfo: User = new User();
+  userInfo: User = new User();
 
   /**
    * 更新用户登录状态（认证 + 用户信息）
