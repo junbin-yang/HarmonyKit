@@ -1,3 +1,4 @@
+import { ColumnCenter } from "designsystem";
 import { AppNavDestination } from "ui";
 import NavigationWithArgsViewModel from "../viewmodel/NavigationWithArgsViewModel";
 
@@ -19,7 +20,7 @@ export struct NavigationWithArgsPage {
    */
   build() {
     AppNavDestination({
-      title: "带参跳转示例页",
+      title: $r("app.string.demo_navigation_with_args_title"),
       viewModel: this.vm
     }) {
       this.NavigationWithArgsContent();
@@ -32,6 +33,9 @@ export struct NavigationWithArgsPage {
    */
   @Builder
   private NavigationWithArgsContent() {
-    Text("带参跳转示例页内容视图")
+    ColumnCenter() {
+      Text(this.vm.routeParams.goodsId.toString() ?? $r("app.string.demo_navigation_with_args_value_empty"));
+      Text(this.vm.routeParams.goodsName ?? $r("app.string.demo_navigation_with_args_value_empty"));
+    }
   }
 }

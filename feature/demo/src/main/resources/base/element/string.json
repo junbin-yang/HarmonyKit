@@ -89,6 +89,22 @@
       "value": "POST 请求成功"
     },
     {
+      "name": "demo_navigation_with_args_title",
+      "value": "带参跳转"
+    },
+    {
+      "name": "demo_navigation_with_args_goods_id_label",
+      "value": "商品 ID"
+    },
+    {
+      "name": "demo_navigation_with_args_goods_name_label",
+      "value": "商品名称"
+    },
+    {
+      "name": "demo_navigation_with_args_value_empty",
+      "value": "未传入"
+    },
+    {
       "name": "demo_state_management_title",
       "value": "状态管理示例"
     },

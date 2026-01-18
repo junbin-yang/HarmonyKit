@@ -89,6 +89,22 @@
       "value": "POST request succeeded"
     },
     {
+      "name": "demo_navigation_with_args_title",
+      "value": "Navigation with Args"
+    },
+    {
+      "name": "demo_navigation_with_args_goods_id_label",
+      "value": "Goods ID"
+    },
+    {
+      "name": "demo_navigation_with_args_goods_name_label",
+      "value": "Goods Name"
+    },
+    {
+      "name": "demo_navigation_with_args_value_empty",
+      "value": "Not provided"
+    },
+    {
       "name": "demo_state_management_title",
       "value": "State Management Demo"
     },

@@ -29,21 +29,12 @@ export struct NetworkListDemoPage {
       title: $r("app.string.demo_base_network_list_title"),
       viewModel: this.vm
     }) {
-      this.NetworkListDemoLayout();
+      BaseNetWorkListView({
+        uiState: this.vm.uiState,
+        onRetry: (): void => this.vm.retryRequest(),
+        content: (): void => this.NetworkListDemoContent()
+      });
     }
-  }
-
-  /**
-   * 构建网络列表示例布局
-   * @returns {void} 无返回值
-   */
-  @Builder
-  private NetworkListDemoLayout() {
-    BaseNetWorkListView({
-      uiState: this.vm.uiState,
-      onRetry: (): void => this.vm.retryRequest(),
-      content: (): void => this.NetworkListDemoContent()
-    });
   }
 
   /**

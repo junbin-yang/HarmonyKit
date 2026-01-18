@@ -23,21 +23,12 @@ export struct NetworkDemoPage {
       title: $r("app.string.demo_base_network_title"),
       viewModel: this.vm
     }) {
-      this.NetworkDemoLayout();
+      BaseNetWorkView({
+        uiState: this.vm.uiState,
+        onRetry: (): void => this.vm.retryRequest(),
+        content: (): void => this.NetworkDemoContent()
+      });
     }
-  }
-
-  /**
-   * 构建网络示例布局
-   * @returns {void} 无返回值
-   */
-  @Builder
-  private NetworkDemoLayout() {
-    BaseNetWorkView({
-      uiState: this.vm.uiState,
-      onRetry: (): void => this.vm.retryRequest(),
-      content: (): void => this.NetworkDemoContent()
-    });
   }
 
   /**
