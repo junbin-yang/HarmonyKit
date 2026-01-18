@@ -147,6 +147,122 @@
     {
       "name": "demo_state_management_action_reset",
       "value": "重置"
+    },
+    {
+      "name": "demo_safe_area_title",
+      "value": "安全区示例"
+    },
+    {
+      "name": "demo_safe_area_unit_tip",
+      "value": "以下数值单位为 vp"
+    },
+    {
+      "name": "demo_safe_area_top_label",
+      "value": "顶部安全区"
+    },
+    {
+      "name": "demo_safe_area_left_label",
+      "value": "左侧安全区"
+    },
+    {
+      "name": "demo_safe_area_bottom_label",
+      "value": "底部安全区"
+    },
+    {
+      "name": "demo_safe_area_right_label",
+      "value": "右侧安全区"
+    },
+    {
+      "name": "demo_screen_adapt_title",
+      "value": "屏幕适配示例"
+    },
+    {
+      "name": "demo_screen_adapt_current_breakpoint_label",
+      "value": "当前断点"
+    },
+    {
+      "name": "demo_screen_adapt_tab_home",
+      "value": "首页"
+    },
+    {
+      "name": "demo_screen_adapt_tab_category",
+      "value": "分类"
+    },
+    {
+      "name": "demo_screen_adapt_tab_mine",
+      "value": "我的"
+    },
+    {
+      "name": "demo_screen_adapt_grid_section_title",
+      "value": "网格布局适配"
+    },
+    {
+      "name": "demo_screen_adapt_list_section_title",
+      "value": "列表布局适配"
+    },
+    {
+      "name": "demo_screen_adapt_grid_item_format",
+      "value": "网格项 %d"
+    },
+    {
+      "name": "demo_screen_adapt_list_item_format",
+      "value": "列表项 %d"
+    },
+    {
+      "name": "demo_screen_adapt_grid_desc",
+      "value": "根据屏幕大小调整列数"
+    },
+    {
+      "name": "demo_screen_adapt_list_desc",
+      "value": "小屏一列，大屏两列"
+    },
+    {
+      "name": "demo_screen_adapt_breakpoint_title",
+      "value": "当前断点"
+    },
+    {
+      "name": "demo_screen_adapt_breakpoint_label",
+      "value": "断点类型"
+    },
+    {
+      "name": "demo_screen_adapt_text_section_title",
+      "value": "文本/大小适配"
+    },
+    {
+      "name": "demo_screen_adapt_size_section_title",
+      "value": "大小适配"
+    },
+    {
+      "name": "demo_screen_adapt_text_title",
+      "value": "标题字号随屏幕变化"
+    },
+    {
+      "name": "demo_screen_adapt_text_desc",
+      "value": "通过 bp 设置不同断点字号与尺寸"
+    },
+    {
+      "name": "demo_screen_adapt_text_sample",
+      "value": "示例文字会随屏幕变化"
+    },
+    {
+      "name": "demo_screen_adapt_text_adaptive_label",
+      "value": "适配文本"
+    },
+    {
+      "name": "demo_screen_adapt_text_fixed_label",
+      "value": "固定文本"
+    },
+    {
+      "name": "demo_screen_adapt_size_title",
+      "value": "尺寸随屏幕变化"
+    },
+    {
+      "name": "demo_screen_adapt_size_desc",
+      "value": "通过 bp 设置不同断点尺寸"
+    },
+    {
+      "name": "demo_screen_adapt_size_label",
+      "value": "示例尺寸：%s"
     }
   ]
 }
