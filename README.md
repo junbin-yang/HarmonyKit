@@ -1,34 +1,47 @@
 <div align="center">
 
-<img src="docs/images/graphs/logo.svg" width="120" alt="HarmonyProject Logo"/>
+<img src="docs/images/graphs/logo.svg" width="120" alt="HarmonyKit Logo"/>
 
-# HarmonyProject
+# HarmonyKit
 
 _一个开箱即用的 HarmonyOS 快速开发框架_
 
-[![GitHub](https://img.shields.io/badge/GitHub-HarmonyProject-blue?style=flat-square&logo=github)](https://github.com/Joker-x-dev/HarmonyProject)
-[![Gitee](https://img.shields.io/badge/Gitee-HarmonyProject-red?style=flat-square&logo=gitee)](https://gitee.com/Joker-x-dev/HarmonyProject)
+<!-- 语言切换按钮 -->
+<div align="center">
+  <a href="README_EN.md">🌍 English</a>
+</div>
+
+[![GitHub](https://img.shields.io/badge/GitHub-HarmonyKit-blue?style=flat-square&logo=github)](https://github.com/Joker-x-dev/HarmonyKit)
+[![Gitee](https://img.shields.io/badge/Gitee-HarmonyKit-red?style=flat-square&logo=gitee)](https://gitee.com/Joker-x-dev/HarmonyKit)
 [![Docs](https://img.shields.io/badge/Docs-harmony.dusksnow.top-orange?style=flat-square&logo=readthedocs)](https://harmony.dusksnow.top)
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Joker-x-dev/HarmonyProject)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Joker-x-dev/HarmonyKit)
 
 </div>
 
 ## 📖 项目简介
 
-HarmonyProject 是一个基于 **HarmonyOS NEXT / ArkTS / ArkUI** 的快速开发框架，内置应用最常见的基础能力（网络、分页、数据库、本地存储、状态管理、导航等），提供清晰的模块结构与示例页面，帮助你 **“拉仓库 → 运行 → 填业务”** 快速启动项目。
+HarmonyKit 是一个基于 **HarmonyOS NEXT / ArkTS / ArkUI** 的快速开发框架，内置应用最常见的基础能力（网络、分页、数据库、本地存储、状态管理、导航等），提供清晰的模块结构与示例页面，帮助你 **"拉仓库 → 运行 → 填业务"** 快速启动项目。
 
 > 如果项目对你有帮助，欢迎点个 Star ⭐ 这会是持续维护的动力！
 
-## 📍 项目地址
+## 📱 项目预览
 
-- **GitHub**：https://github.com/Joker-x-dev/HarmonyProject
-- **Gitee**：https://gitee.com/Joker-x-dev/HarmonyProject
+<img src="docs/images/preview/mobile.png" alt="手机"/>
 
-> 本框架源于 **青商城（HarmonyOS）** 的实践，仅保留通用能力与示例页面。完整电商业务请查看：  
-> GitHub：https://github.com/Joker-x-dev/CoolMallArkTS  
+<img src="docs/images/preview/foldable.png" alt="折叠屏"/>
+
+<img src="docs/images/preview/tablet.png" alt="平板"/>
+
+### 📍 项目地址
+
+- **GitHub**：https://github.com/Joker-x-dev/HarmonyKit
+- **Gitee**：https://gitee.com/Joker-x-dev/HarmonyKit
+
+> 本框架源于 **青商城（HarmonyOS）** 的实践，仅保留通用能力与示例页面。完整电商业务请查看：
+> GitHub：https://github.com/Joker-x-dev/CoolMallArkTS
 > Gitee：https://gitee.com/Joker-x-dev/CoolMallArkTS
 
-`## 📚 说明文档
+### 📚 说明文档
 
 - **说明文档**：[在线查看](https://harmony.dusksnow.top)
   - 与代码同步的在线文档，包含快速开始、架构说明、示例路由、常见定制点等，便于理解项目与学习
@@ -36,7 +49,6 @@ HarmonyProject 是一个基于 **HarmonyOS NEXT / ArkTS / ArkUI** 的快速开�
   - 组件库使用说明与参数配置，包含常用组件示例
 - **IBest-ORM 数据库文档**：[在线查看](https://ibest-orm.ibestservices.com)
   - 本地数据库能力与实体定义说明，包含基础使用示例
-`
 ## 🧩 内置能力
 
 - **基础网络**：统一网络封装 + 加载/错误/空态管理

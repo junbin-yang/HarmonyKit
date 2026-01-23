@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="docs/images/graphs/logo.svg" width="120" alt="HarmonyProject Logo"/>
+<img src="docs/images/graphs/logo.svg" width="120" alt="HarmonyKit Logo"/>
 
-# HarmonyProject
+# HarmonyKit
 
 _An out-of-the-box HarmonyOS rapid development framework_
 
@@ -11,29 +11,37 @@ _An out-of-the-box HarmonyOS rapid development framework_
   <a href="README.md">🌍 中文</a>
 </div>
 
-[![GitHub](https://img.shields.io/badge/GitHub-HarmonyProject-blue?style=flat-square&logo=github)](https://github.com/Joker-x-dev/HarmonyProject)
-[![Gitee](https://img.shields.io/badge/Gitee-HarmonyProject-red?style=flat-square&logo=gitee)](https://gitee.com/Joker-x-dev/HarmonyProject)
+[![GitHub](https://img.shields.io/badge/GitHub-HarmonyKit-blue?style=flat-square&logo=github)](https://github.com/Joker-x-dev/HarmonyKit)
+[![Gitee](https://img.shields.io/badge/Gitee-HarmonyKit-red?style=flat-square&logo=gitee)](https://gitee.com/Joker-x-dev/HarmonyKit)
 [![Docs](https://img.shields.io/badge/Docs-harmony.dusksnow.top-orange?style=flat-square&logo=readthedocs)](https://harmony.dusksnow.top)
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Joker-x-dev/HarmonyProject)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Joker-x-dev/HarmonyKit)
 
 </div>
 
 ## 📖 Project Overview
 
-HarmonyProject is a rapid development framework built on **HarmonyOS NEXT / ArkTS / ArkUI**. It ships with the most common app capabilities (networking, paging, database, local storage, state management, navigation, etc.) and provides clean module structure plus demo pages so you can **clone → run → build** quickly.
+HarmonyKit is a rapid development framework built on **HarmonyOS NEXT / ArkTS / ArkUI**. It ships with the most common app capabilities (networking, paging, database, local storage, state management, navigation, etc.) and provides clean module structure plus demo pages so you can **clone → run → build** quickly.
 
 > If this project helps you, please give it a Star ⭐ It means a lot and keeps the project moving forward!
 
-## 📍 Project Links
+## 📱 Project Preview
 
-- **GitHub**: https://github.com/Joker-x-dev/HarmonyProject
-- **Gitee**: https://gitee.com/Joker-x-dev/HarmonyProject
+<img src="docs/images/preview/mobile.png" alt="Mobile"/>
 
-> This framework comes from the real-world CoolMall (HarmonyOS) practice. It keeps only the generic capabilities and demos. For the full e-commerce project, see:  
-> GitHub: https://github.com/Joker-x-dev/CoolMallArkTS  
+<img src="docs/images/preview/foldable.png" alt="Foldable"/>
+
+<img src="docs/images/preview/tablet.png" alt="Tablet"/>
+
+### 📍 Project Links
+
+- **GitHub**: https://github.com/Joker-x-dev/HarmonyKit
+- **Gitee**: https://gitee.com/Joker-x-dev/HarmonyKit
+
+> This framework comes from the real-world CoolMall (HarmonyOS) practice. It keeps only the generic capabilities and demos. For the full e-commerce project, see:
+> GitHub: https://github.com/Joker-x-dev/CoolMallArkTS
 > Gitee: https://gitee.com/Joker-x-dev/CoolMallArkTS
 
-## 📚 Documentation
+### 📚 Documentation
 
 - **Docs**: [View online](https://harmony.dusksnow.top)
   - Kept in sync with the code, covering quick start, architecture, sample routes, and common customization points

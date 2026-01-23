@@ -2,7 +2,7 @@
   "string": [
     {
       "name": "app_name",
-      "value": "HarmonyProject"
+      "value": "HarmonyKit"
     },
     {
       "name": "core",
@@ -30,7 +30,7 @@
     },
     {
       "name": "main_about_link_github_url",
-      "value": "https://github.com/Joker-x-dev/HarmonyProject"
+      "value": "https://github.com/Joker-x-dev/HarmonyKit"
     },
     {
       "name": "main_about_link_gitee_title",
@@ -38,7 +38,7 @@
     },
     {
       "name": "main_about_link_gitee_url",
-      "value": "https://gitee.com/Joker-x-dev/HarmonyProject"
+      "value": "https://gitee.com/Joker-x-dev/HarmonyKit"
     },
     {
       "name": "main_about_link_ui_title",
